@@ -21,7 +21,7 @@ class Program
 {
     public static void Main()
     {
-        var PlantBuilder = builder();
+        var PlantBuilder = Plant.Builder();
         //var PlantBuilder = new PlantBuilder();
         Plant Beere = PlantBuilder.WithName("Erdbeer").WithVitamins(12).WithParasite(builder => builder.WithLength(2).Build()).Build();
         Beere.PrintPlant();

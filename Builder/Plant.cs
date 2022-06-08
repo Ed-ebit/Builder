@@ -16,7 +16,7 @@ namespace Builder
         private string color;
         private Parasite parasite;
 
-        public static PlantBuilder builder()
+        public static PlantBuilder Builder()
         {
             return new PlantBuilder();
         }
