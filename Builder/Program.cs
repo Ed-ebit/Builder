@@ -14,11 +14,18 @@
 
 // create a type of object with different configurations while keeping immutability of class
 // can be combined with e.g. Singleton?
+using static Builder.Plant;
+
 namespace Builder;
 class Program
 {
     public static void Main()
     {
-        Plant.PlantBuilder();
+        var PlantBuilder = builder();
+        //var PlantBuilder = new PlantBuilder();
+        Plant Beere = PlantBuilder.WithName("Erdbeer").WithVitamins(12).WithParasite(builder => builder.WithLength(2).Build()).Build();
+        Beere.PrintPlant();
     }
+
+ 
 }
